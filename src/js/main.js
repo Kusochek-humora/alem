@@ -292,4 +292,39 @@ document.addEventListener('DOMContentLoaded', function () {
     // video.addEventListener('ended', function() {
     //     playButton.style.display = 'block';
     // });
+
+
+       // якорные ссылки
+
+       const links = document.querySelectorAll('.anchors-link');
+       const mobileMenu = document.getElementById('menu-mobile');
+   
+   
+       mobileMenu.addEventListener('click', function (e) {
+           const target = e.target;
+           links.forEach((item, index) => {
+               if (target && target === item) {
+                   buttonMenu.classList.remove('active');
+                   menuMobile.classList.remove('active');
+                   document.body.classList.remove('active');
+               }
+           })
+       })
+   
+       links.forEach(function (link) {
+           link.addEventListener('click', function (event) {
+               event.preventDefault();
+               const sectionId = link.getAttribute('data-href').substring(1);;
+               if (sectionId === 'header') {
+                   window.scrollTo({ top: 0, behavior: 'smooth' });
+               }
+               else {
+                   const section = document.getElementById(`${sectionId}`);
+                   if (section) {
+                       section.scrollIntoView({ behavior: 'smooth' });
+                   }
+               }
+           });
+       });
+   
 });

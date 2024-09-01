@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Project</title>
-	<link rel="stylesheet" href="css/main.min.css?=1725190075509">
+	<link rel="stylesheet" href="css/main.min.css?=1725190652780">
 </head>
 <script src="https://api-maps.yandex.ru/v3/?apikey=d312e393-a03a-4006-8204-b13ec72b20ae&lang=ru_RU"></script>
 
@@ -18,12 +18,12 @@
             <img src="images/logo.png" alt="логотип" class="header__logo-img">
         </a>
         <ul class="header__list">
-            <li class="header__list-item"><a href="#" class="header__list-link">Купить билет</a></li>
-            <li class="header__list-item"><a href="#" class="header__list-link">О фестивале</a></li>
-            <li class="header__list-item"><a href="#" class="header__list-link">Карта</a></li>
-            <li class="header__list-item"><a href="#" class="header__list-link">FAQ</a></li>
-            <li class="header__list-item"><a href="#" class="header__list-link">Мерч</a></li>
-            <li class="header__list-item"><a href="#" class="header__list-link">Контакты</a></li>
+            <li class="header__list-item"><a data-href="#schedule" class="anchors-link header__list-link">Купить билет</a></li>
+            <li class="header__list-item"><a data-href="#about" class="anchors-link header__list-link">О фестивале</a></li>
+            <li class="header__list-item"><a data-href="#locations" class="anchors-link header__list-link">Карта</a></li>
+            <li class="header__list-item"><a data-href="#faq" class="anchors-link header__list-link">FAQ</a></li>
+            <li class="header__list-item"><a data-href="#merch" class="anchors-link header__list-link">Мерч</a></li>
+            <!-- <li class="header__list-item"><a href="#" class="anchors-link header__list-link">Контакты</a></li> -->
         </ul>
         <ul class="header__social">
             <li class="header__social-item">
@@ -74,12 +74,15 @@
     <main class="main">
         <nav class="menu" id="menu-mobile">
             <ul class="menu__list">
-                <li class="menu__list-item"><a href="#" class="menu__list-link">Купить билет</a></li>
-                <li class="menu__list-item"><a href="#" class="menu__list-link">О фестивале</a></li>
-                <li class="menu__list-item"><a href="#" class="menu__list-link">Карта</a></li>
-                <li class="menu__list-item"><a href="#" class="menu__list-link">FAQ</a></li>
-                <li class="menu__list-item"><a href="#" class="menu__list-link">Мерч</a></li>
-                <li class="menu__list-item"><a href="#" class="menu__list-link">Контакты</a></li>
+                <li class="menu__list-item"><a data-href="#schedule" class="anchors-link menu__list-link">Купить
+                        билет</a></li>
+                <li class="menu__list-item"><a data-href="#about" class="anchors-link menu__list-link">О фестивале</a>
+                </li>
+                <li class="menu__list-item"><a data-href="#locations" class="anchors-link menu__list-link">Карта</a>
+                </li>
+                <li class="menu__list-item"><a data-href="#faq" class="anchors-link menu__list-link">FAQ</a></li>
+                <li class="menu__list-item"><a data-href="#merch" class="anchors-link menu__list-link">Мерч</a></li>
+                <!-- <li class="menu__list-item"><a data-href="#" class="anchors-link menu__list-link">Контакты</a></li> -->
             </ul>
         </nav>
         <section id="promo" class="promo" style="background-image:url(images/background.png)">
@@ -94,7 +97,7 @@
                         <time datetime="2024-09-13">13</time> по
                         <time datetime="2024-09-15">15 сентября</time>
                     </p>
-                    <a href="#" class="button promo__button">
+                    <a data-href="#schedule" class="anchors-link button promo__button">
                         Расписание мероприятий
                     </a>
                 </div>
@@ -366,7 +369,7 @@
             </div>
         </section>   -->
 
-        <section class="locations">
+        <section class="locations" id="locations">
             <div class="container locations__container">
                 <h2 class="locations__title title">
                     Карта мероприятий
@@ -1040,7 +1043,7 @@
             </div>
         </section>
 
-        <section class="faq">
+        <section class="faq" id="faq">
             <div class="faq__container container">
                 <h2 class="faq__title title">
                     FAQ
@@ -1135,7 +1138,7 @@
             </div>
         </section>
 
-        <section class="merch">
+        <section class="merch" id="merch">
             <div class="merch__container container">
                 <h2 class="merch__title title">
                     Мерч
@@ -1256,8 +1259,8 @@
             }, 3000);
         }
     </script>
-    <script src="js/vendor.min.js?=1725190075509"></script>
-<script src="js/main.min.js?=1725190075509"></script>
+    <script src="js/vendor.min.js?=1725190652780"></script>
+<script src="js/main.min.js?=1725190652780"></script>
 </body>
 
 <script>
