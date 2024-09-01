@@ -1,0 +1,57 @@
+.video {
+    height: 832px;
+    max-width: 100vw;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    &__container {
+        height: 100%;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        gap: 22px 0;
+    }
+
+    &__title {
+        color: #fff;
+
+        line-height: 70px;
+        text-align: left;
+        letter-spacing: -2.1px;
+    }
+
+    &__wrapper {
+        height: 540px;
+        position: relative;
+        video {
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    &__icon {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 140px;
+        height: 140px;
+        svg,
+        path {
+            @include transition;
+        }
+        &:hover {
+            svg,
+            path {
+                fill: $green;
+            }
+        }
+    }
+}

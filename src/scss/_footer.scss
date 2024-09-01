@@ -1,0 +1,45 @@
+.footer {
+    padding: 50px 0;
+    background-color: $green;
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+    }
+
+    &__copyright,
+    &__confidience {
+        width: 270px;
+        color: $white;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: -0.54px;
+    }
+
+    &__logo {
+        @media screen and (max-width: 768px) {
+            order: 1;
+        }
+    }
+
+    &__confidience {
+        @media screen and (max-width: 768px) {
+            text-align: center;
+            order: 2;
+        }
+    }
+    &__copyright {
+        @media screen and (max-width: 768px) {
+            text-align: center;
+            order: 3;
+        }
+    }
+}
+// .container {
+// }

@@ -1,0 +1,202 @@
+.schedule {
+    // padding-top: 180px;
+    padding-bottom: 113px;
+    background-color: #f3f3f3;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 27px 0;
+    }
+
+    &__title {
+        text-align: left;
+        line-height: 70px;
+    }
+
+    &__triggers {
+        display: flex;
+        align-items: center;
+        gap: 0 20px;
+        @media screen and (max-width: 768px) {
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+    }
+
+    &__trigger {
+        background-color: #e4e4e4;
+        padding: 10px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        color: #959695;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 18px;
+
+        @include transition;
+        &.active,
+        &:hover {
+            background-color: $yellow;
+            color: $black;
+        }
+    }
+
+    &__map {
+        display: inline-block;
+        margin-left: auto;
+
+        font-size: 18px;
+        font-weight: 700;
+        color: $black;
+
+        position: relative;
+        @include transition;
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            text-align: left;
+        }
+        &::after {
+            content: "";
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: black;
+            transition:
+                width 0.3s ease,
+                left 0.3s ease;
+            transform: translateX(-50%);
+
+            @include transition;
+        }
+        &:hover {
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4 колонки */
+        gap: 16px;
+        @media screen and (max-width: 1024px){
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media screen and (max-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__event {
+        display: none;
+        flex-direction: column;
+        // border: 1px solid #ddd; /* Линия вокруг карточки */
+        // border-radius: 8px; /* Закругленные углы */
+        overflow: hidden;
+        &.active {
+            display: flex;
+        }
+    }
+
+    &__event-picture {
+        width: 100%;
+        padding-top: 100%; /* Это сделает фото квадратным */
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    &__event-img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        object-position: center;
+        z-index: 0;
+    }
+    &__event-price {
+        color: $black;
+        font-size: 18px;
+        font-weight: bold;
+        @media screen and (max-width: 768px) {
+            font-size: 14px;
+        }
+    }
+    &__event-description {
+        display: flex;
+        flex-direction: column;
+        gap: 10px 0;
+    }
+
+    &__event-title {
+        font-size: 20px;
+        font-weight: bold;
+        color: $black;
+        text-transform: uppercase;
+        @media screen and (max-width: 500px) {
+            font-size: 14px;
+        }
+    }
+
+    &__event-date {
+        display: flex;
+        gap: 0 5px;
+        @media screen and (max-width: 500px) {
+            flex-direction: column;
+            gap: 10px;
+            // font-size: 14px;
+        }
+        time {
+            padding: 5px 10px;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 120%; /* 16.8px */
+            text-transform: uppercase;
+            @media screen and (max-width: 500px) {
+                font-size: 12px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+            &:first-child {
+                background-color: black;
+                color: $white;
+            }
+            &:last-child {
+                background-color: $yellow;
+                color: $black;
+            }
+        }
+    }
+
+    &__event-address {
+        color: $black;
+        font-size: 16px;
+        line-height: 120%;
+        font-weight: 700;
+        @media screen and (max-width: 500px) {
+            font-size: 14px;
+        }
+    }
+
+    &__event-button {
+        display: inline-flex;
+        font-size: 20px;
+        color: $white;
+        background-color: $green;
+        @media screen and (max-width: 500px) {
+            font-size: 14px;
+            padding: 10px;
+        }
+        @include transition;
+        &:hover {
+            background-color: $black;
+        }
+    }
+}

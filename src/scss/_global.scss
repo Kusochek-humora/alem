@@ -1,0 +1,247 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Alem", sans-serif;
+    font-weight: 400;
+
+    &.active {
+        overflow: hidden;
+        // padding-right: 17px;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-size: inherit;
+    font-weight: 400;
+}
+form {
+    margin: 0;
+}
+fieldset {
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+address {
+    font-style: inherit;
+}
+p {
+    margin: 0;
+}
+
+ul,
+ol,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+button {
+    display: block;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+input {
+    border: inherit;
+    padding: 0;
+    margin: 0;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.main {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+figure,
+figcaption,
+time {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 15px 0;
+    margin: 0 auto;
+    // @media screen and (max-width: 500px) {
+    //     padding: 0 20px 0;
+    // }
+}
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+.reset-button {
+    margin: 0;
+    border: 0;
+    border: 1px solid black;
+    padding: 0;
+    font-family: inherit;
+    text-align: left;
+    // font-size: 1em;
+    color: inherit;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    &:disabled {
+        cursor: default;
+    }
+}
+
+.title {
+    font-size: 70px;
+    color: $black;
+    font-weight: 700;
+    @media screen and (max-width: 768px) {
+        font-size: 50px;
+    }
+    @media screen and (max-width: 500px) {
+        font-size: 46px;
+    }
+}
+.button {
+    padding: 16px;
+    color: $white;
+    font-size: 20px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo {
+    display: inline-block;
+    max-width: 90px;
+    width: 100%;
+    height: 37px;
+    position: relative;
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        z-index: 1;
+        top: 0;
+        left: 0;
+    }
+}
+*::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+}
+*::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: #dfe9eb;
+}
+
+// *::-webkit-scrollbar-track:hover {
+//     background-color: #b8c0c2;
+// }
+
+// *::-webkit-scrollbar-track:active {
+//     background-color: #b8c0c2;
+// }
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #74b461;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #62a34b;
+}
+
+*::-webkit-scrollbar-thumb:active {
+    background-color: #62a34b;
+}
+
+#notification {
+    visibility: hidden;
+    min-width: 250px;
+    // background-color: $red;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    opacity: 0;
+    transition:
+        opacity 0.5s ease-in-out,
+        visibility 0.5s;
+}
+
+#notification.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+section {
+    scroll-margin-top: 110px;
+}
+#notification {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: $green;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    opacity: 0;
+    transition:
+        opacity 0.5s ease-in-out,
+        visibility 0.5s;
+}
+
+#notification.show {
+    visibility: visible;
+    opacity: 1;
+}
